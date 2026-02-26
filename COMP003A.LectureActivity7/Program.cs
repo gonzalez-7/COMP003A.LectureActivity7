@@ -82,6 +82,28 @@ namespace COMP003A.LectureActivity7
 			{
 				Console.WriteLine("Invalid input (not a number).");
 			}
+
+			Console.WriteLine();
+			Console.WriteLine("try-catch test: ");
+
+			try
+			{
+				int choice2 = int.Parse(input);
+				Console.WriteLine("Converted number (try-catch): " + choice2);
+			}
+
+			catch (FormatException)
+			{
+				Console.WriteLine("Invalid number entered (Format Exception caught.)");
+			}
+
+			/* Reflection
+			 * 1. It prevents errors before they happen
+			 * 
+			 * 2. Because user can type unexpected input like letters that can crash parsing
+			 * 
+			 * 3. It helped me by understand loop behavior by letting me watch the loop variable change each interaction
+			 */
 		}
 	}
 }
