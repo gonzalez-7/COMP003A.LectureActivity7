@@ -39,6 +39,49 @@ namespace COMP003A.LectureActivity7
 			{
 				Console.WriteLine(names[i]);
 			}
+
+
+			Console.WriteLine();
+			Console.Write("Enter a number between 1 and 3: ");
+			string input = Console.ReadLine();
+
+			bool isAllDigits = true;
+
+			if (input == null || input.Length == 0)
+			{
+				isAllDigits = false;
+			}
+
+			else
+			{
+				for (int i = 0; i < input.Length; i++)
+				{
+					if (input[i] < '0' || input[i] > '9')
+					{
+						isAllDigits = false;
+					}
+				}
+			}
+
+			if (isAllDigits)
+			{
+				int choice = int.Parse(input);
+
+				if (choice >= 1 && choice <=3)
+				{
+					Console.WriteLine("Valid input! You entered: " + choice);
+				}
+
+				else
+				{
+					Console.WriteLine("Number is out of range. Please enter 1 to 3.");
+				}
+			}
+
+			else
+			{
+				Console.WriteLine("Invalid input (not a number).");
+			}
 		}
 	}
 }
