@@ -15,7 +15,7 @@ namespace COMP003A.LectureActivity7
 				Console.WriteLine(scores[i]);
 			}
 
-			//
+			
 
 			List<string> names = new List<string>();
 			names.Add("Alex");
@@ -28,6 +28,16 @@ namespace COMP003A.LectureActivity7
 			foreach (string name in names)
 			{
 				Console.WriteLine(name);
+			}
+
+			
+
+			Console.WriteLine();
+			Console.WriteLine("Names using for loop: ");
+			
+			for (int i = 0; i < names.Count; i++)
+			{
+				Console.WriteLine(names[i]);
 			}
 		}
 	}
